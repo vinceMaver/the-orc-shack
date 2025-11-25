@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  api:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - redis
+    environment:
+      - PORT=8080
+      - DATABASE_PATH=/data/db.sqlite
+      - JWT_SECRET=super-secret-key
+      - GOOGLE_CLIENT_ID=
+      - GOOGLE_CLIENT_SECRET=
+      - GOOGLE_REDIRECT_URL=http://localhost:8080/auth/google/callback
+    volumes:
+      - dbdata:/data
+
+  memcached:
+    image: memcached:1.6
+    container_name: memcached
+    restart: always
+    ports:
+      - "11211:11211"
+
+volumes:
+  dbdata:

@@ -1,0 +1,52 @@
+orc-shack/
+│   go.mod
+│   go.sum
+│   README.md
+│   docker-compose.yml
+│   Dockerfile
+│
+├── cmd/
+│   └── api/
+│       └── main.go
+│
+└── internal/
+    ├── common/
+    │   ├── db.go
+    │   ├── config.go
+    │   ├── middleware.go
+    │   ├── tenant.go
+    │   ├── rate_limit.go
+    │   └── logging.go
+    │
+    ├── auth/
+    │   ├── jwt.go
+    │   ├── password.go
+    │   ├── oauth.go
+    │   └── brute_force.go
+    │
+    ├── user/
+    │   ├── user.go
+    │   ├── repository.go
+    │   ├── service.go
+    │   └── handler.go
+    │
+    ├── restaurant/
+    │   ├── restaurant.go
+    │   ├── repository.go
+    │   ├── service.go
+    │   └── handler.go
+    │
+    ├── dish/
+    │   ├── dish.go
+    │   ├── repository.go
+    │   ├── service.go
+    │   └── handler.go
+    │
+    ├── review/
+    │   ├── review.go
+    │   ├── repository.go
+    │   ├── service.go
+    │   └── handler.go
+    │
+    └── ai/
+        └── sentiment.go
