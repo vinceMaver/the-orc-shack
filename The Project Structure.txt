@@ -43,10 +43,9 @@ orc-shack/
     │   └── handler.go
     │
     ├── review/
-    │   ├── review.go
-    │   ├── repository.go
-    │   ├── service.go
-    │   └── handler.go
-    │
-    └── ai/
-        └── sentiment.go
+         ├── review.go
+         ├── repository.go
+         ├── service.go
+         ├── handler.go
+         └── sentiment.go
+
